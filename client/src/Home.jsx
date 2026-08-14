@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 
-// AdBanner component direct Home file ke andar
 const AdBanner = ({ adKey, width, height }) => {
   const bannerRef = useRef(null);
 
@@ -26,7 +25,7 @@ const AdBanner = ({ adKey, width, height }) => {
   }, [adKey, width, height]);
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', margin: '12px 0', overflow: 'hidden' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', margin: '14px 0', overflow: 'hidden' }}>
       <div ref={bannerRef} />
     </div>
   );
@@ -68,11 +67,11 @@ const Home = ({ setActiveTool }) => {
     }
   ];
 
+  // Sirf 3 ad keys rakhte hain taake har tool ke darmiyan aik ad aaye
   const adKeys = [
     'd115e550e46c09cfe291ed49e0e2fa9e',
     'd3c0fd21efdb64029cb87ff0f0d28ea8',
-    'e8ae945dd284baf5462fc3a497f1cad3',
-    'f421aa1896bb10f6fc60ce8d7f4a9c3f'
+    'e8ae945dd284baf5462fc3a497f1cad3'
   ];
 
   return (
@@ -168,6 +167,7 @@ const Home = ({ setActiveTool }) => {
               </div>
             </div>
 
+            {/* Har tool ke baad aik ad render hoga jab tak adKeys khatam na hon */}
             {index < adKeys.length && (
               <AdBanner adKey={adKeys[index]} width={300} height={50} />
             )}
