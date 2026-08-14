@@ -1,5 +1,36 @@
-import React from 'react';
-import AdBanner from './AdBanner';
+import React, { useEffect, useRef } from 'react';
+
+// AdBanner component direct Home file ke andar
+const AdBanner = ({ adKey, width, height }) => {
+  const bannerRef = useRef(null);
+
+  useEffect(() => {
+    if (bannerRef.current && !bannerRef.current.firstChild) {
+      const confScript = document.createElement('script');
+      confScript.type = 'text/javascript';
+      confScript.innerHTML = `atOptions = {
+        'key' : '${adKey}',
+        'format' : 'iframe',
+        'height' : ${height},
+        'width' : ${width},
+        'params' : {}
+      };`;
+
+      const invokeScript = document.createElement('script');
+      invokeScript.type = 'text/javascript';
+      invokeScript.src = `https://versatilesentiment.com/${adKey}/invoke.js`;
+
+      bannerRef.current.appendChild(confScript);
+      bannerRef.current.appendChild(invokeScript);
+    }
+  }, [adKey, width, height]);
+
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center', margin: '12px 0', overflow: 'hidden' }}>
+      <div ref={bannerRef} />
+    </div>
+  );
+};
 
 const Home = ({ setActiveTool }) => {
   const tools = [
@@ -37,12 +68,11 @@ const Home = ({ setActiveTool }) => {
     }
   ];
 
-  // Ad Keys jo aapke paas hain
   const adKeys = [
-    'd115e550e46c09cfe291ed49e0e2fa9e', // 468x60
-    'd3c0fd21efdb64029cb87ff0f0d28ea8', // 300x250
-    'e8ae945dd284baf5462fc3a497f1cad3', // 320x50
-    'f421aa1896bb10f6fc60ce8d7f4a9c3f'  // 160x300
+    'd115e550e46c09cfe291ed49e0e2fa9e',
+    'd3c0fd21efdb64029cb87ff0f0d28ea8',
+    'e8ae945dd284baf5462fc3a497f1cad3',
+    'f421aa1896bb10f6fc60ce8d7f4a9c3f'
   ];
 
   return (
@@ -138,7 +168,6 @@ const Home = ({ setActiveTool }) => {
               </div>
             </div>
 
-            {/* Har tool ke baad aik ad banner insert hoga */}
             {index < adKeys.length && (
               <AdBanner adKey={adKeys[index]} width={300} height={50} />
             )}
