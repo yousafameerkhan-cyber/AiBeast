@@ -1,5 +1,1 @@
-{
-  "appId": "com.aibeast.app",
-  "appName": "aibeast",
-  "webDir": "dist"
-}
+{"appId": "com.aibeast.app", "appName": "AiBeast", "webDir": "client/dist"}
