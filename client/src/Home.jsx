@@ -93,7 +93,7 @@ const Home = ({ setActiveTool }) => {
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent'
         }}>
-          AiBeast Hub
+          MrBrain Hub
         </h2>
         <p style={{ margin: 0, fontSize: '13px', color: '#9ca3af', lineHeight: '1.5' }}>
           Explore advanced calculation tools designed for speed, precision, and ease of use.

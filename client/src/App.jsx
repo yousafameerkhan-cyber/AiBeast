@@ -52,7 +52,7 @@ const App = () => {
             WebkitTextFillColor: 'transparent',
             letterSpacing: '0.5px'
           }}>
-            AiBeast
+            MrBrain
           </span>
         </div>
 
@@ -180,7 +180,7 @@ const App = () => {
         lineHeight: '1.5'
       }}>
         Developed with ❤️ by Hyfal Technologies <br />
-        <span style={{ fontWeight: '600', color: '#00f0ff' }}>© AiBeast</span> All rights reserved.
+        <span style={{ fontWeight: '600', color: '#00f0ff' }}>© MrBrain</span> All rights reserved.
       </footer>
 
     </div>
