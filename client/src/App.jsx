@@ -115,7 +115,24 @@ const App = () => {
                 }}
               >
                 ⏳ Age Calculator Pro
-<a href="https://github.com/yousafameerkhan-cyber/AiBeast/blob/main/PRIVACY.md" target="_blank" className="menu-item">🔒 Privacy Policy</a>
+              <a 
+                href="https://github.com/yousafameerkhan-cyber/AiBeast/blob/main/PRIVACY.md" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  display: 'block',
+                  padding: '12px 16px',
+                  fontSize: '14px',
+                  fontWeight: '600',
+                  color: '#d1d5db',
+                  background: 'transparent',
+                  borderBottom: '1px solid #1a1a24',
+                  cursor: 'pointer',
+                  textDecoration: 'none'
+                }}
+              >
+                🔒 Privacy Policy
+              </a>
               </div>
               <div 
                 onClick={() => handleSelect('date-difference')}
