@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.onrender.mr_brain_cxyk.twa",
+        "sha256_cert_fingerprints": ["6E:AB:E8:8F:35:8C:4F:A5:91:C7:71:03:85:32:03:8C:B3:F2:7A:FA:0A:F5:84:AA:78:05:98:83:36:1D:7D:AB"]
+      }
+    }]
