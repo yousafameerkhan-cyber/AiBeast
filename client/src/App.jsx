@@ -115,6 +115,7 @@ const App = () => {
                 }}
               >
                 ⏳ Age Calculator Pro
+<a href="https://github.com/yousafameerkhan-cyber/AiBeast/blob/main/PRIVACY.md" target="_blank" className="menu-item">🔒 Privacy Policy</a>
               </div>
               <div 
                 onClick={() => handleSelect('date-difference')}
