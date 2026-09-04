@@ -186,7 +186,7 @@ const App = () => {
 <div style={{ textAlign: 'center', padding: '20px 0', fontSize: '13px', color: '#9ca3af', borderTop: '1px solid #1a1a24', marginTop: '30px' }}>
   <p>© 2026 Mr.Brain. All rights reserved.</p>
   <a 
-    href="https://github.com/yousafameerkhan-cyber/AiBeast/blob/main/PRIVACY.md" 
+    href="/privacy.html" 
     target="_blank" 
     rel="noopener noreferrer"
     style={{ color: '#00f0ff', textDecoration: 'none', fontWeight: '500', display: 'inline-block', marginTop: '6px' }}
